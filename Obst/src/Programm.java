@@ -32,6 +32,14 @@ public class Programm {
 
         System.out.println("======================");
 
+        Erdbeere erdbeere = new Erdbeere();
+        erdbeere.setFarbe("Rot");
+        erdbeere.setGewicht(12);
+        erdbeere.setReif(true);
+
+        System.out.println("======================");
+
+
     }
 }
 
