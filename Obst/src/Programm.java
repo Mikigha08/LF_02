@@ -37,7 +37,28 @@ public class Programm {
         erdbeere.setGewicht(12);
         erdbeere.setReif(true);
 
+        System.out.println(erdbeere);
+
         System.out.println("======================");
+
+        Birne birne = new Birne();
+        birne.setFarbe("Grün");
+        birne.setGewicht(205);
+        birne.setReif(true);
+
+        System.out.println(birne);
+
+        System.out.println("======================");
+
+        Pfirsich pfirsich = new Pfirsich();
+        pfirsich.setFarbe("Gelb & Rot");
+        pfirsich.setGewicht(210);
+        pfirsich.setReif(true);
+
+        System.out.println(pfirsich);
+
+        System.out.println("======================");
+
 
 
     }
