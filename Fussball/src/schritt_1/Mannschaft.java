@@ -1,6 +1,5 @@
 package schritt_1;
 
-
 import java.util.ArrayList;
 
 public class Mannschaft {
@@ -13,32 +12,42 @@ public class Mannschaft {
     private int staerke = 0;
     private int torschuss = 0;
 
-    public Mannschaft(String name, Trainer trainer, Torwart torwart) {
+    @Override
+    public String toString() {
+        return "Mannschaft{" + "name='" + name + '\'' + ", trainer=" + trainer + ", torwart=" + torwart + ", spielerListe=" + spielerListe + ", motivation=" + motivation + ", staerke=" + staerke + ", torschuss=" + torschuss + '}';
+    }
+
+    public Mannschaft(String name, Trainer trainer, Torwart torwart, ArrayList<Spieler> spielerListe) {
         this.name = name;
         this.trainer = trainer;
         this.torwart = torwart;
     }
 
-
     public int getMotivation() {
-        double ergebnis = 0;
+        int gesamtMotivation = 0;
         for (Spieler s : spielerListe) {
-            ergebnis = ergebnis + s.getMotivation();
+            gesamtMotivation = gesamtMotivation + s.getMotivation();
         }
 
-        ergebnis = ergebnis + torwart.getMotivation();
+        gesamtMotivation = gesamtMotivation + torwart.getMotivation();
 
-        ergebnis = ergebnis / spielerListe.size();
+        gesamtMotivation = gesamtMotivation / spielerListe.size();
 
-        return (int) ergebnis;
+        return gesamtMotivation;
     }
 
+    public int getStaerke() {
+        int gesamtStaerke = 0;
+        for (Spieler s : spielerListe) {
+            gesamtStaerke = gesamtStaerke + s.getStaerke();
+        }
 
+        gesamtStaerke = gesamtStaerke + torwart.getStaerke();
 
+        gesamtStaerke = gesamtStaerke / spielerListe.size();
 
-
-
-
+        return gesamtStaerke;
+    }
 
 
     public String getName() {
@@ -74,3 +83,5 @@ public class Mannschaft {
         this.spielerListe = spielerListe;
     }
 }
+
+

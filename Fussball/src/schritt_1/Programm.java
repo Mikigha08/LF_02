@@ -1,97 +1,242 @@
 package schritt_1;
 
-public class Programm {
+import java.util.ArrayList;
+
+public class Programm{
 
 
 
     public static void main(String[] args) {
 
-        System.out.print("Trainer1: ");
+        System.out.println("===================");
+        System.out.println("| Heim Mannschaft |");
+        System.out.println("===================");
 
-        Trainer trainer = new Trainer("Gerret",46,7);
+        System.out.print("Heim Trainer: ");
 
-        System.out.println(trainer);
+        Trainer heimTrainer = new Trainer("Gerret",46,7);
+
+        System.out.println(heimTrainer);
 
         System.out.println("===================");
 
-        System.out.print("Torwart");
+        System.out.print("Heim Torwart");
 
-        Torwart torwart = new Torwart("Manuel",23,9,2,10);
+        Torwart heimTorwart = new Torwart("Manuel",23,9,2,10);
 
-        System.out.println(torwart);
-
-        System.out.println("===================");
-        System.out.print("Spieler1: ");
-
-        Spieler spieler1 = new Spieler("Harald1",21,8,7,9,23 );
-
-        System.out.println(spieler1);
-
-        System.out.println();
-        System.out.print("Spieler2: ");
-
-        Spieler spieler2 = new Spieler("Harald2",25,6,5,7,10 );
-
-        System.out.println(spieler2);
-
-        System.out.println();
-        System.out.print("Spieler3: ");
-
-        Spieler spieler3 = new Spieler("Harald2",25,6,5,7,10 );
-
-        System.out.println(spieler3);
-
-        System.out.println();
-        System.out.print("Spieler4: ");
-
-        Spieler spieler4 = new Spieler("Harald2",25,6,5,7,10 );
-
-        System.out.println(spieler4);
-
-        System.out.println();
-        System.out.print("Spieler5: ");
-
-        Spieler spieler5 = new Spieler("Harald2",25,6,5,7,10 );
-
-        System.out.println(spieler5);
-
-        System.out.println();
-        System.out.print("Spieler6: ");
-
-        Spieler spieler6 = new Spieler("Harald2",25,6,5,7,10 );
-
-        System.out.println(spieler6);
-
-        System.out.println();
-        System.out.print("Spieler7: ");
-
-        Spieler spieler7 = new Spieler("Harald2",25,6,5,7,10 );
-
-        System.out.println(spieler7);
-
-        System.out.println();
-        System.out.print("Spieler8: ");
-
-        Spieler spieler8 = new Spieler("Harald2",25,6,5,7,10 );
-
-        System.out.println(spieler8);
-
-        System.out.println();
-        System.out.print("Spieler9: ");
-
-        Spieler spieler9 = new Spieler("Harald2",25,6,5,7,10 );
-
-        System.out.println(spieler9);
-
-        System.out.println();
-        System.out.print("Spieler10: ");
-
-        Spieler spieler10 = new Spieler("Harald2",25,6,5,7,10 );
-
-        System.out.println(spieler10);
+        System.out.println(heimTorwart);
 
         System.out.println("===================");
+        System.out.print("Heim Spieler1: ");
 
+        Spieler heimSpieler1 = new Spieler("Harald",21,8,7,9,23 );
+
+        System.out.println(heimSpieler1);
+
+        System.out.println();
+        System.out.print("Heim Spieler2: ");
+
+        Spieler heimSpieler2 = new Spieler("Marvin",25,7,7,7,10 );
+
+        System.out.println(heimSpieler2);
+
+        System.out.println();
+        System.out.print("Heim Spieler3: ");
+
+        Spieler heimSpieler3 = new Spieler("Marlon",27,6,5,6,13 );
+
+        System.out.println(heimSpieler3);
+
+        System.out.println();
+        System.out.print("Heim Spieler4: ");
+
+        Spieler heimSpieler4 = new Spieler("Alan",23,7,10,8,16 );
+
+        System.out.println(heimSpieler4);
+
+        System.out.println();
+        System.out.print("Heim Spieler5: ");
+
+        Spieler heimSpieler5 = new Spieler("Elias",25,8,7,9,11 );
+
+        System.out.println(heimSpieler5);
+
+        System.out.println();
+        System.out.print("Heim Spieler6: ");
+
+        Spieler heimSpieler6 = new Spieler("Joni",25,5,8,7,10 );
+
+        System.out.println(heimSpieler6);
+
+        System.out.println();
+        System.out.print("Heim Spieler7: ");
+
+        Spieler heimSpieler7 = new Spieler("Berkay",22,8,6,8,8 );
+
+        System.out.println(heimSpieler7);
+
+        System.out.println();
+        System.out.print("Heim Spieler8: ");
+
+        Spieler heimSpieler8 = new Spieler("Noah",27,8,9,5,18 );
+
+        System.out.println(heimSpieler8);
+
+        System.out.println();
+        System.out.print("Heim Spieler9: ");
+
+        Spieler heimSpieler9 = new Spieler("Lukas",26,5,7,8,14 );
+
+        System.out.println(heimSpieler9);
+
+        System.out.println();
+        System.out.print("Heim Spieler10: ");
+
+        Spieler heimSpieler10 = new Spieler("Mike",21,10,10,9,20 );
+
+        System.out.println(heimSpieler10);
+
+        System.out.println("===================");
+        System.out.println();
+
+
+        System.out.println("===================");
+        System.out.println("| Gast Mannschaft |");
+        System.out.println("===================");
+
+        System.out.print("Gast Trainer1: ");
+
+        Trainer gastTrainer = new Trainer("Gerret",46,7);
+
+        System.out.println(gastTrainer);
+
+        System.out.println("===================");
+
+        System.out.print("Gast Torwart");
+
+        Torwart gastTorwart = new Torwart("Manuel",23,9,2,10);
+
+        System.out.println(gastTorwart);
+
+        System.out.println("===================");
+        System.out.print("Gast Spieler1: ");
+
+        Spieler gastSpieler1 = new Spieler("Harald",21,8,7,9,23 );
+
+        System.out.println(gastSpieler1);
+
+        System.out.println();
+        System.out.print("Gast Spieler2: ");
+
+        Spieler gastSpieler2 = new Spieler("Marvin",25,7,7,7,10 );
+
+        System.out.println(gastSpieler2);
+
+        System.out.println();
+        System.out.print("Gast Spieler3: ");
+
+        Spieler gastSpieler3 = new Spieler("Marlon",27,6,5,6,13 );
+
+        System.out.println(gastSpieler3);
+
+        System.out.println();
+        System.out.print("Gast Spieler4: ");
+
+        Spieler gastSpieler4 = new Spieler("Alan",23,7,10,8,16 );
+
+        System.out.println(gastSpieler4);
+
+        System.out.println();
+        System.out.print("Gast Spieler5: ");
+
+        Spieler gastSpieler5 = new Spieler("Elias",25,8,7,9,11 );
+
+        System.out.println(gastSpieler5);
+
+        System.out.println();
+        System.out.print("Gast Spieler6: ");
+
+        Spieler gastSpieler6 = new Spieler("Joni",25,5,8,7,10 );
+
+        System.out.println(gastSpieler6);
+
+        System.out.println();
+        System.out.print("Gast Spieler7: ");
+
+        Spieler gastSpieler7 = new Spieler("Berkay",22,8,6,8,8 );
+
+        System.out.println(gastSpieler7);
+
+        System.out.println();
+        System.out.print("Gast Spieler8: ");
+
+        Spieler gastSpieler8 = new Spieler("Noah",27,8,9,5,18 );
+
+        System.out.println(gastSpieler8);
+
+        System.out.println();
+        System.out.print("Gast Spieler9: ");
+
+        Spieler gastSpieler9 = new Spieler("Lukas",26,5,7,8,14 );
+
+        System.out.println(gastSpieler9);
+
+        System.out.println();
+        System.out.print("Gast Spieler10: ");
+
+        Spieler gastSpieler10 = new Spieler("Mike",21,10,10,9,20 );
+
+        System.out.println(gastSpieler10);
+
+        System.out.println("===================");
+
+        System.out.println();
+        System.out.println();
+
+
+
+        ArrayList<Spieler> spielerHeim = new ArrayList<>();
+        Mannschaft heim = new Mannschaft("Heim", heimTrainer, heimTorwart, spielerHeim);
+
+        spielerHeim.add(heimSpieler1);
+        spielerHeim.add(heimSpieler2);
+        spielerHeim.add(heimSpieler3);
+        spielerHeim.add(heimSpieler4);
+        spielerHeim.add(heimSpieler5);
+        spielerHeim.add(heimSpieler6);
+        spielerHeim.add(heimSpieler7);
+        spielerHeim.add(heimSpieler8);
+        spielerHeim.add(heimSpieler9);
+        spielerHeim.add(heimSpieler10);
+
+
+        System.out.println(spielerHeim);
+
+
+        ArrayList<Spieler> spielerGast = new ArrayList<>();
+        Mannschaft gast = new Mannschaft("Gast", gastTrainer, gastTorwart, spielerGast);
+
+        spielerGast.add(gastSpieler1);
+        spielerGast.add(gastSpieler2);
+        spielerGast.add(gastSpieler3);
+        spielerGast.add(gastSpieler4);
+        spielerGast.add(gastSpieler5);
+        spielerGast.add(gastSpieler6);
+        spielerGast.add(gastSpieler7);
+        spielerGast.add(gastSpieler8);
+        spielerGast.add(gastSpieler9);
+        spielerGast.add(gastSpieler10);
+
+        System.out.println(spielerGast);
+
+        Ergebnis ergebnis = new Ergebnis();
+        ergebnis.ToreHeim();
+        ergebnis.ToreGast();
+
+        Spiel spiel = new Spiel(heim, gast, ergebnis);
+
+
+        System.out.println(spiel);
 
 
     }
