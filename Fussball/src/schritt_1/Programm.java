@@ -149,42 +149,42 @@ public class Programm{
         System.out.println();
         System.out.print("Gast Spieler5: ");
 
-        Spieler gastSpieler5 = new Spieler("Elias",25,8,7,9,11 );
+        Spieler gastSpieler5 = new Spieler("Elias",25,8,7,1,11 );
 
         System.out.println(gastSpieler5);
 
         System.out.println();
         System.out.print("Gast Spieler6: ");
 
-        Spieler gastSpieler6 = new Spieler("Joni",25,5,8,7,10 );
+        Spieler gastSpieler6 = new Spieler("Joni",25,5,8,1,10 );
 
         System.out.println(gastSpieler6);
 
         System.out.println();
         System.out.print("Gast Spieler7: ");
 
-        Spieler gastSpieler7 = new Spieler("Berkay",22,8,6,8,8 );
+        Spieler gastSpieler7 = new Spieler("Berkay",22,8,6,4,8 );
 
         System.out.println(gastSpieler7);
 
         System.out.println();
         System.out.print("Gast Spieler8: ");
 
-        Spieler gastSpieler8 = new Spieler("Noah",27,8,9,5,18 );
+        Spieler gastSpieler8 = new Spieler("Noah",27,8,9,1,18 );
 
         System.out.println(gastSpieler8);
 
         System.out.println();
         System.out.print("Gast Spieler9: ");
 
-        Spieler gastSpieler9 = new Spieler("Lukas",26,5,7,8,14 );
+        Spieler gastSpieler9 = new Spieler("Lukas",26,5,7,4,14 );
 
         System.out.println(gastSpieler9);
 
         System.out.println();
         System.out.print("Gast Spieler10: ");
 
-        Spieler gastSpieler10 = new Spieler("Mike",21,10,10,9,20 );
+        Spieler gastSpieler10 = new Spieler("Mike",21,10,10,1,20 );
 
         System.out.println(gastSpieler10);
 
