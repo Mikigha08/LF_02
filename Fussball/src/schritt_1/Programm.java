@@ -193,11 +193,7 @@ public class Programm{
         System.out.println();
         System.out.println();
 
-
-
         ArrayList<Spieler> spielerHeim = new ArrayList<>();
-        Mannschaft heim = new Mannschaft("Heim", heimTrainer, heimTorwart, spielerHeim);
-
         spielerHeim.add(heimSpieler1);
         spielerHeim.add(heimSpieler2);
         spielerHeim.add(heimSpieler3);
@@ -210,11 +206,15 @@ public class Programm{
         spielerHeim.add(heimSpieler10);
 
 
-        System.out.println(spielerHeim);
+        Mannschaft heim = new Mannschaft("Heim", heimTrainer, heimTorwart, spielerHeim);
+
+
+
+
+        //System.out.println(spielerHeim);
 
 
         ArrayList<Spieler> spielerGast = new ArrayList<>();
-        Mannschaft gast = new Mannschaft("Gast", gastTrainer, gastTorwart, spielerGast);
 
         spielerGast.add(gastSpieler1);
         spielerGast.add(gastSpieler2);
@@ -227,7 +227,9 @@ public class Programm{
         spielerGast.add(gastSpieler9);
         spielerGast.add(gastSpieler10);
 
-        System.out.println(spielerGast);
+        Mannschaft gast = new Mannschaft("Gast", gastTrainer, gastTorwart, spielerGast);
+
+        //System.out.println(spielerGast);
 
         Ergebnis ergebnis = new Ergebnis();
         ergebnis.ToreHeim();

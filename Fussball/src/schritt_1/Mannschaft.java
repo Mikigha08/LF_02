@@ -8,45 +8,72 @@ public class Mannschaft {
     private Trainer trainer;
     private Torwart torwart;
     private ArrayList<Spieler> spielerListe;
-    private int motivation = 0;
-    private int staerke = 0;
-    private int torschuss = 0;
+    private int gesamtMotivation = 0;
+    private int gesamtStaerke = 0;
+
 
     @Override
     public String toString() {
-        return "Mannschaft{" + "name='" + name + '\'' + ", trainer=" + trainer + ", torwart=" + torwart + ", spielerListe=" + spielerListe + ", motivation=" + motivation + ", staerke=" + staerke + ", torschuss=" + torschuss + '}';
+        return "\n\nTrainer: " + getTrainer() + "\n\n===================" + "\n\nTorwart: " + getTorwart() + "\n\n===================" + "\n\nHeim-Motivation: " + getGesamtHeimMotivation() + "\n\nHeim-Stärke: " + getGesamtHeimStaerke() + "\n\nGast-Motivation: " + getGesamtGastMotivation() + "\n\nGast-Stärke: " + getGesamtGastStaerke() + "\n\n===================";
     }
 
     public Mannschaft(String name, Trainer trainer, Torwart torwart, ArrayList<Spieler> spielerListe) {
         this.name = name;
         this.trainer = trainer;
         this.torwart = torwart;
+        this.spielerListe = spielerListe;
     }
 
-    public int getMotivation() {
-        int gesamtMotivation = 0;
+    public int getGesamtHeimMotivation() {
+        int gesamtHeimMotivation = 0;
         for (Spieler s : spielerListe) {
-            gesamtMotivation = gesamtMotivation + s.getMotivation();
+            gesamtHeimMotivation = gesamtHeimMotivation + s.getMotivation();
         }
 
-        gesamtMotivation = gesamtMotivation + torwart.getMotivation();
+        gesamtHeimMotivation = gesamtHeimMotivation + torwart.getMotivation();
 
-        gesamtMotivation = gesamtMotivation / spielerListe.size();
+        gesamtHeimMotivation = gesamtHeimMotivation / spielerListe.size();
 
-        return gesamtMotivation;
+        return gesamtHeimMotivation;
     }
 
-    public int getStaerke() {
-        int gesamtStaerke = 0;
+    public int getGesamtHeimStaerke() {
+        int gesamtHeimStaerke = 0;
         for (Spieler s : spielerListe) {
-            gesamtStaerke = gesamtStaerke + s.getStaerke();
+            gesamtHeimStaerke = gesamtHeimStaerke + s.getStaerke();
         }
 
-        gesamtStaerke = gesamtStaerke + torwart.getStaerke();
+        gesamtHeimStaerke = gesamtHeimStaerke + torwart.getStaerke();
 
-        gesamtStaerke = gesamtStaerke / spielerListe.size();
+        gesamtHeimStaerke = gesamtHeimStaerke / spielerListe.size();
 
-        return gesamtStaerke;
+        return gesamtHeimStaerke;
+    }
+
+    public int getGesamtGastMotivation() {
+        int gesamtGastMotivation = 0;
+        for (Spieler s : spielerListe) {
+            gesamtGastMotivation = gesamtGastMotivation + s.getMotivation();
+        }
+
+        gesamtGastMotivation = gesamtGastMotivation + torwart.getMotivation();
+
+        gesamtGastMotivation = gesamtGastMotivation / spielerListe.size();
+
+        return gesamtGastMotivation;
+    }
+
+    public int getGesamtGastStaerke() {
+        int gesamtGastStaerke = 0;
+        for (Spieler s : spielerListe) {
+            gesamtGastStaerke = gesamtGastStaerke + s.getStaerke();
+        }
+
+        gesamtGastStaerke = gesamtGastStaerke + torwart.getStaerke();
+
+        gesamtGastStaerke = gesamtGastStaerke / spielerListe.size();
+
+        return gesamtGastStaerke;
     }
 
 

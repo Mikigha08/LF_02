@@ -18,7 +18,7 @@ public class Spiel {
 
     @Override
     public String toString() {
-        return "Spiel: " + "\nheim: " + getHeim() + "\ngast: " + getGast() + "\nergebnis: " + getErgebnis() + "\nspielverlauf: " + getSpielverlauf();
+        return "\nHeim: " + getHeim() + "\nGast: " + getGast() + "\nergebnis: " + getErgebnis() + "\nspielverlauf: " + getSpielverlauf();
     }
 
     public Mannschaft getHeim() {
